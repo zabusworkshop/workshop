@@ -21,13 +21,9 @@
 			</IconTabBar>
 			<footer>
 				<Toolbar>
-					<Button
-						icon="sap-icon://message-popup" type="Emphasized"
-						text="{=${messages>/}.length}"
-						visible="{=!!${message>/}.length}"
-						press="onMessageButtonPress"/>
 					<tinyapp:MessageButton
-						text="Extended Button">
+						text="{=${messages>/}.length}"
+						messages="{messages>/}">
 						<tinyapp:messagePopover>
 							<MessagePopover items="{messages>/}">
 								<items>
