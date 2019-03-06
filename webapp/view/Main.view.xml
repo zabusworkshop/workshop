@@ -18,6 +18,23 @@
 					</IconTabFilter>
 				</items>
 			</IconTabBar>
+			<footer>
+				<Toolbar>
+					<Button
+						icon="sap-icon://message-popup" type="Emphasized"
+						text="{=${messages>/}.length}"
+						visible="{=!!${message>/}.length}"
+						press="onMessageButtonPress"/>
+					<MessagePopover items="{messages>/}">
+						<items>
+							<MessageItem
+								description="{messages>description}"
+								type="{messages>type}"
+								title="{messages>message}"/>
+						</items>
+					</MessagePopover>
+				</Toolbar>
+			</footer>
         </Page>
     </App>
 </mvc:View>

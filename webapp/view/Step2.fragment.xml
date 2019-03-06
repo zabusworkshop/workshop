@@ -3,6 +3,6 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Input value="{path: 'viewModel>/simpleText'}" valueLiveUpdate="true"/>
+	<Input value="{path: 'viewModel>/simpleText', type: 'sap.ui.model.type.Integer'}" valueLiveUpdate="true"/>
 	<Text text="Live Change: {viewModel>/simpleText}" />
 </core:FragmentDefinition>
