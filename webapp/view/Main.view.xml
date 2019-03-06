@@ -1,11 +1,12 @@
-<View
-	xmlns="sap.m"
-	xmlns:core="sap.ui.core"
+<mvc:View
+	xmlns:core="sap.ui.core" 
 	xmlns:mvc="sap.ui.core.mvc"
-	controllerName="tinyapp.controller.Main">
+	xmlns="sap.m"
+	controllerName="tinyapp.controller.Main"
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
         <Page title="The Tiny App">
-            <List>
+            <List mode="SingleSelectLeft">
             	<items>
             		<StandardListItem title="Moscow"/>
             		<StandardListItem title="St. Petersburg"/>
@@ -13,4 +14,4 @@
             </List>
         </Page>
     </App>
-</View>
+</mvc:View>
