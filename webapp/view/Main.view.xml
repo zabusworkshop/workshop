@@ -6,10 +6,17 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
         <Page title="The Tiny App">
-            <List mode="SingleSelectLeft" selectionChange="onListSelectionChange">
+            <List
+            	mode="SingleSelectLeft"
+            	selectionChange="onListSelectionChange"
+            	items="{path: 'viewModel>/cities'}">
+            	<headerToolbar>
+	        		<Toolbar>
+	        			<Title  id="title" text="Welcome to {viewModel>name}!"/>
+	        		</Toolbar>
+	        	</headerToolbar>
             	<items>
-            		<StandardListItem title="Moscow"/>
-            		<StandardListItem title="St. Petersburg"/>
+            		<StandardListItem title="{viewModel>name}"/>
             	</items>
             </List>
         </Page>
