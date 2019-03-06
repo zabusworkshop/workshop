@@ -6,19 +6,18 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
         <Page title="The Tiny App">
-            <List
-            	mode="SingleSelectLeft"
-            	selectionChange="onListSelectionChange"
-            	items="{path: 'viewModel>/cities'}">
-            	<headerToolbar>
-	        		<Toolbar>
-	        			<Title  id="title" text="Welcome to {viewModel>name}!"/>
-	        		</Toolbar>
-	        	</headerToolbar>
-            	<items>
-            		<StandardListItem title="{viewModel>name}"/>
-            	</items>
-            </List>
+        	<IconTabBar expandable="false">
+        		<items>
+		        	<IconTabFilter
+						text="Step 1">
+						<core:Fragment fragmentName="tinyapp.view.Step1" type="XML"/>
+					</IconTabFilter>
+					<IconTabFilter
+						text="Step 2">
+						<Text text="Attachments go here ..." />
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
         </Page>
     </App>
 </mvc:View>

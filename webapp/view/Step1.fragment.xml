@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<List
+		mode="SingleSelectLeft"
+		selectionChange="onListSelectionChange"
+		items="{path: 'viewModel>/cities'}">
+		<headerToolbar>
+			<Toolbar>
+				<Title id="title" text="Welcome to {viewModel>name}!"/>
+			</Toolbar>
+		</headerToolbar>
+		<items>
+			<StandardListItem title="{viewModel>name}"/>
+		</items>
+	</List>
+</core:FragmentDefinition>
