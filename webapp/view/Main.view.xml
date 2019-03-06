@@ -6,7 +6,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
         <Page title="The Tiny App">
-            <List mode="SingleSelectLeft">
+            <List mode="SingleSelectLeft" selectionChange="onListSelectionChange">
             	<items>
             		<StandardListItem title="Moscow"/>
             		<StandardListItem title="St. Petersburg"/>
