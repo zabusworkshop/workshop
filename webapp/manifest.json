@@ -46,6 +46,7 @@
 		"_version": "1.3.0"
 	},
 	"sap.ui5": {
+		"handleValidation": true,
 		"rootView": {
 			"viewName": "tinyapp.view.Main",
 			"type": "XML"

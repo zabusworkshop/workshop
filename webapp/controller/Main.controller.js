@@ -15,7 +15,8 @@ sap.ui.define([
         		}, {
         			id: 2,
         			name: "St. Petersburg"
-        		}]
+        		}],
+        		simpleText: ""
         	}), "viewModel");
         },
         
