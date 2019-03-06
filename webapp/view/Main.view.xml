@@ -14,7 +14,7 @@
 					</IconTabFilter>
 					<IconTabFilter
 						text="Step 2">
-						<Text text="Attachments go here ..." />
+						<Text text="To be done..." />
 					</IconTabFilter>
 				</items>
 			</IconTabBar>
