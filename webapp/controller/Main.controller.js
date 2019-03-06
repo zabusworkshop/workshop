@@ -1,7 +1,7 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast"
-], function (Controller, MessageToast) {
+    "tinyapp/utils/welcome"
+], function (Controller, welcome) {
     "use strict";
 
     return Controller.extend("tinyapp.controller.Main", {
@@ -11,7 +11,7 @@ sap.ui.define([
         },
         
         onListSelectionChange: function (oEvent) {
-        	MessageToast.show("Welcome to " + oEvent.getParameter("listItem").getTitle());
+        	welcome.greet(oEvent.getParameter("listItem").getTitle());
         }
     });
 });
