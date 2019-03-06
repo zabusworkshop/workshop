@@ -2,6 +2,7 @@
 	xmlns:core="sap.ui.core" 
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
+	xmlns:tinyapp="tinyapp.controls"
 	controllerName="tinyapp.controller.Main"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
@@ -25,14 +26,19 @@
 						text="{=${messages>/}.length}"
 						visible="{=!!${message>/}.length}"
 						press="onMessageButtonPress"/>
-					<MessagePopover items="{messages>/}">
-						<items>
-							<MessageItem
-								description="{messages>description}"
-								type="{messages>type}"
-								title="{messages>message}"/>
-						</items>
-					</MessagePopover>
+					<tinyapp:MessageButton
+						text="Extended Button">
+						<tinyapp:messagePopover>
+							<MessagePopover items="{messages>/}">
+								<items>
+									<MessageItem
+										description="{messages>description}"
+										type="{messages>type}"
+										title="{messages>message}"/>
+								</items>
+							</MessagePopover>
+						</tinyapp:messagePopover>
+					</tinyapp:MessageButton>
 				</Toolbar>
 			</footer>
         </Page>
