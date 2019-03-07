@@ -41,6 +41,14 @@
       "description": "SAPUI5 Test Resources"
     },
     {
+		"path": "/orion",
+		"target": {
+			"type": "service",
+			"name": "orion"
+		},
+		"description": "Orion Service"
+	},
+    {
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",

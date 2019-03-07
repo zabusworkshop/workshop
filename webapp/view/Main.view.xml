@@ -1,8 +1,8 @@
 <mvc:View
 	xmlns:core="sap.ui.core" 
 	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:tinylib="tinylib"
 	xmlns="sap.m"
-	xmlns:tinyapp="tinyapp.controls"
 	controllerName="tinyapp.controller.Main"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
@@ -21,10 +21,10 @@
 			</IconTabBar>
 			<footer>
 				<Toolbar>
-					<tinyapp:MessageButton
+					<tinylib:MessageButton
 						text="{=${messages>/}.length}"
 						messages="{messages>/}">
-						<tinyapp:messagePopover>
+						<tinylib:messagePopover>
 							<MessagePopover items="{messages>/}">
 								<items>
 									<MessageItem
@@ -33,8 +33,8 @@
 										title="{messages>message}"/>
 								</items>
 							</MessagePopover>
-						</tinyapp:messagePopover>
-					</tinyapp:MessageButton>
+						</tinylib:messagePopover>
+					</tinylib:MessageButton>
 				</Toolbar>
 			</footer>
         </Page>
