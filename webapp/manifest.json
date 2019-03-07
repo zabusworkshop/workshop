@@ -10,8 +10,8 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.38.11"
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
 		},
 		"dataSources": {
 			"my.service": {
@@ -19,6 +19,14 @@
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"
+				}
+			},
+			"Northwind.svc": {
+				"uri": "/northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
 				}
 			}
 		},
@@ -56,15 +64,19 @@
 			"libs": {
 				"sap.m": {},
 				"sap.ui.core": {},
-				"sap.ui.layout": {},
-				"tinylib": {}
+				"sap.ui.layout": {}
 			}
 		},
 		"contentDensities": {
 			"compact": true,
 			"cozy": false
 		},
-		"models": {},
+		"models": {
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"dataSource": "Northwind.svc"
+			}
+		},
 		"resources": {},
 		"_version": "1.2.0"
 	}

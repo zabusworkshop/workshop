@@ -17,6 +17,10 @@
 						text="Step 2">
 						<core:Fragment fragmentName="tinyapp.view.Step2" type="XML"/>
 					</IconTabFilter>
+					<IconTabFilter
+						text="Step 3">
+						<core:Fragment fragmentName="tinyapp.view.Step3" type="XML"/>
+					</IconTabFilter>
 				</items>
 			</IconTabBar>
 			<footer>

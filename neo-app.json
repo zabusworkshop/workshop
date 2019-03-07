@@ -41,13 +41,13 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-		"path": "/orion",
-		"target": {
-			"type": "service",
-			"name": "orion"
-		},
-		"description": "Orion Service"
-	},
+      "path": "/orion",
+      "target": {
+        "type": "service",
+        "name": "orion"
+      },
+      "description": "Orion Service"
+    },
     {
       "path": "/sap/opu/odata",
       "target": {
@@ -56,6 +56,14 @@
         "entryPath": "/sap/opu/odata"
       },
       "description": "P4A"
+    },
+    {
+      "path": "/northwind",
+      "target": {
+        "type": "destination",
+        "name": "northwind"
+      },
+      "description": "Northwind OData Service"
     }
   ],
   "welcomeFile": "/webapp/index.html",
