@@ -3,8 +3,9 @@ sap.ui.define([
     "tinyapp/utils/welcome",
     "sap/ui/model/json/JSONMOdel",
     "sap/m/MessagePopover",
-    "sap/m/MessageItem"
-], function (Controller, welcome, JSONModel, MessagePopover, MessageItem) {
+    "sap/m/MessageItem",
+    "sap/ui/model/Filter"
+], function (Controller, welcome, JSONModel, MessagePopover, MessageItem, Filter) {
     "use strict";
 
     return Controller.extend("tinyapp.controller.Main", {
@@ -55,6 +56,21 @@ sap.ui.define([
         	} else {
         		this.getMessagePopover().openBy(oEvent.getSource());
         	}
+        },
+        
+        onEmployeeSearch: function (oEvent) {
+        	var sValue = oEvent.getParameter("newValue");
+        	var aFilters = [];
+        	if (sValue) {
+        		aFilters.push(new Filter({
+        			filters: [
+        				new Filter("FirstName", "Contains", sValue),
+        				new Filter("LastName", "Contains", sValue)
+        			],
+        			and: false
+        		}));
+        	}
+        	this.getView().byId("employeeList").getBinding("items").filter(aFilters);
         }
     });
 });

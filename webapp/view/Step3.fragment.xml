@@ -4,12 +4,21 @@
 	xmlns="sap.m"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<List
+		id="employeeList"
 		mode="SingleSelectLeft"
 		selectionChange="onListSelectionChange"
 		items="{
 			path: '/Employees',
-			sorter: {path: 'HireDate', descending: false}
+			parameters: {
+				threshold: 100,
+				operationMode: 'Auto'
+			}
 		}">
+		<headerToolbar>
+			<Toolbar>
+				<SearchField value="{viewModel>/employeeSearch}" liveChange="onEmployeeSearch" />
+			</Toolbar>
+		</headerToolbar>
 		<items>
 			<ObjectListItem title="{FirstName} {LastName}">
 				<attributes>
